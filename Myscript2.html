@@ -1,0 +1,28 @@
+<html>
+<head>
+<title>Прокрутка заднего фона страницы</title>
+</head>
+<body background="cat0.jpg">
+<h1>Пример прокрутки заднего фона страницы=)</h1>
+<script type="text/javascript">
+var backgroundOffset=0;
+var obj=eval('document.body');
+function scrollBackground(size,direction)
+{
+if (direction==1)
+{
+backgrounOffset= ++ backgroundOffset;
+if (backgrounOffset> size) backgroundOffset=0;
+obj.style.backgroundPosition="0" + backgroundOffset;
+}
+else
+{
+backgroundOffset= -- backgroundOffset;
+if (backgroundOffset > size) backgroundOffset = 0;
+    obj.style.backgroundPosition = "0 " + backgroundOffset;
+}
+}
+setInterval("scrollBackground(1536,-1)",50);
+</script>
+</body>
+</html>
